@@ -1,9 +1,13 @@
 # Parcial práctico - Sistema de generación de turnos
 
 Autor: Santiago Arias Rojas
+
 Código de estudiante: 2416285
+
 Materia: Bases de Datos
+
 Universidad: Universidad del Valle
+
 Docente: Jefferson Amado Peña Torres
 
 Descripción
