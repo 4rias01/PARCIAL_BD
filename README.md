@@ -19,21 +19,18 @@ Contenido
 
 Cómo probar
 -----------
-1. Crear una base de datos vacía en el SGBD de tu preferencia (PostgreSQL, MySQL, SQL Server).
-2. Ejecutar `practica.ddl.sql` para crear las tablas.
-3. Ejecutar `practica.dml.sql` para poblar las tablas con datos de prueba.
-4. Ejecutar `consultas.sql` para validar resultados y explorar los datos.
+1. Crear una base de datos vacía en el SGBD de tu preferencia (PostgreSQL, MySQL, SQL Server), en este caso usaremos PostgresSQL.
+2. Creamos un contenedor de Docker con las instrucción: `docker run -it -e POSTGRES_USER=ulimar -e POSTGRES_PASSWORD=ex4m_db -p 5432:5432 postgres:14` para inicializar el SGBD.
+3. Creamos otro contenedor de Docker para usar PGAdmin: `docker run -p 5050:80 -e "PGADMIN_DEFAULT_EMAIL=usuario@servilimar.com" -e "PGADMIN_DEFAULT_PASSWORD=limar#123" dpage/pgadmin4`
+4. Ejecutar `practica.ddl.sql` para crear las tablas.
+5. Ejecutar `practica.dml.sql` para poblar las tablas con datos de prueba.
+6. Ejecutar `consultas.sql` para validar resultados y explorar los datos.
 
-Notas
+Nota
 -----
-- El DDL fue adaptado según requerimientos del curso. Si usas un SGBD diferente a PostgreSQL, puede ser necesario ajustar pequeñas diferencias de sintaxis (p. ej. `CURRENT_TIMESTAMP`, `INTERVAL`, concatenación de cadenas, o `LIMIT`).
 - Algunas decisiones de diseño responden a requerimientos del docente (columnas duplicadas como `id_usuario` e `id_empleado`). Si deseas, puedo normalizar el modelo o documentar las anomalías detectadas.
 
 Contacto
 --------
 Santiago Arias Rojas - estudiante
-Correo: (añadir correo si lo deseas)
-
-Licencia
---------
-Este repositorio es para fines académicos. Si necesitas otra licencia, indícalo y la añado.
+Correo: santiago.arias.rojas@correounivalle.edu.co
